@@ -157,7 +157,7 @@ function App() {
         ))}
       </Map>
 
-      {userLocation && (
+      {userLocation && !selectedSpot && (
         <button
           onClick={() => {
             setViewState({
@@ -340,9 +340,13 @@ function App() {
             backgroundColor: "#ffffff",
             borderTopLeftRadius: "24px",
             borderTopRightRadius: "24px",
-            overflow: "hidden",
             boxShadow: "0 -4px 20px rgba(0,0,0,0.25)",
-            maxHeight: "70vh",
+
+            maxHeight: "85vh",
+            overflowY: "auto",
+            paddingBottom: "40px",
+
+            zIndex: 1001,
           }}
         >
           <div
